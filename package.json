@@ -1,0 +1,15 @@
+{
+  "name": "Front end skills test",
+  "version": "0.0.1",
+  "devDependencies": {
+    "css-loader": "*",
+    "html-loader": "*",
+    "json-loader": "^0.5.4",
+    "sass-loader": "*",
+    "style-loader": "*"
+  },
+  "dependencies": {
+    "angular" : "1.6.4",
+    "angular-translate": "*"
+  }
+}

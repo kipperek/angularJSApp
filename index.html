@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" ng-module="pgsApp" ng-controller="appController as appCtrl">
+<html lang="en" ng-app="pgsApp" ng-controller="appController as appCtrl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    .splash-screen{
+      position: fixed;
+      width:100%;
+      height: 100%;
+      top:0;
+      left:0;
+      background: #EEE;
+    }
+    .splash-screen>div {
+      position: absolute;
+      width: 100%;
+      top: calc(50% - 0.5em);
+      text-align: center;
+      line-height: 1em;
+    }
+  </style>
 </head>
 <body>
-  
+  <!-- FOUC Splash -->
+  <div class="splash-screen" ng-hide="appCtrl.systemInited">
+    <div>Loading...</div>
+  </div>
+
+  <div class="header"></div>
+  <div>
+  </div>
+  <div class="footer"></div>
+
+  <script src="dist/vendor.bundle.js"></script>
+  <script src="dist/app.bundle.js"></script>
 </body>
 </html>

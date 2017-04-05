@@ -1,0 +1,29 @@
+.header{
+  padding-top: 38px;
+  background: white;
+  border-bottom:1px solid #dbdbdb;
+
+  ul.tabs{
+    background: transparent;
+    margin-bottom: -1px;
+    margin-top: 24px;
+    li+li{
+      margin-left:56px;
+    }
+    a, a:hover, a:focus, a:active{
+      padding: 10px 0;
+      border-bottom-width: 2px;
+      color: #444;
+      background: transparent;
+    }
+
+    a:hover{
+      box-shadow: 0 -2px 0 0 red inset;
+    }
+
+    .tabs-title.is-active a{
+      color: red;
+      box-shadow: 0 -2px 0 0 red inset;
+    }
+  }
+}

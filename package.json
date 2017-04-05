@@ -1,15 +1,19 @@
 {
-  "name": "Front end skills test",
+  "name": "fontend_skills_test",
   "version": "0.0.1",
   "devDependencies": {
+    "angular": "1.6.4",
+    "angular-translate": "*",
     "css-loader": "*",
+    "file-loader": "*",
+    "foundation-sites": "*",
     "html-loader": "*",
+    "jquery": "*",
     "json-loader": "^0.5.4",
+    "material-foundation": "*",
+    "node-sass": "*",
     "sass-loader": "*",
-    "style-loader": "*"
-  },
-  "dependencies": {
-    "angular" : "1.6.4",
-    "angular-translate": "*"
+    "style-loader": "*",
+    "url-loader": "^0.5.8"
   }
 }

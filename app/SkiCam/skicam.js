@@ -28,8 +28,7 @@ skiCam.filter('limitObject', function(){
     }
     return ret;
  };
-})
-
+});
 
 skiCam.controller('skiCamController', ['$scope', function($scope){
   var scope = this;
@@ -37,10 +36,14 @@ skiCam.controller('skiCamController', ['$scope', function($scope){
   scope.today = new Date();
 
   $scope.modelPromise.then(function getSkiCamSuccess(ret){
-    scope.camData = ret[$scope.camName];
     scope.loading = false;
+    if(ret[$scope.camName] === undefined){
+      scope.camError = 'noimages';
+    }else{
+      scope.camData = ret[$scope.camName];
+    }
   },function getSkiCamError(){
-    scope.camError = true;
+    scope.camError = 'fetch';
     scope.loading = false;
   });
 }]);

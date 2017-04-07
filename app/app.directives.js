@@ -22,3 +22,15 @@ pgsApp.directive('contact', function(){
     template: require('./Views/contact.html')
   }
 });
+
+pgsApp.directive('ngSrc', function(){
+  return {
+    link: function(scope, el){
+      el[0].onerror = function imageError(){
+        el.attr('src', 'images/noImage.png');
+        el.addClass('image-error');
+        el[0].onerror = null;
+      }
+    }
+  }
+});

@@ -1,3 +1,7 @@
+.tabs-active-border{
+    box-shadow: 0 -2px 0 0 $pgs-orange inset;
+}
+
 .header{
   padding-top: 38px;
   background: white;
@@ -8,7 +12,10 @@
     margin-bottom: -1px;
     margin-top: 24px;
     li+li{
-      margin-left:56px;
+      @media screen and (min-width:360px){
+        margin-left:56px;
+      }
+      margin-left:20px;
     }
     a, a:hover, a:focus, a:active{
       padding: 10px 0;
@@ -18,12 +25,12 @@
     }
 
     a:hover{
-      box-shadow: 0 -2px 0 0 red inset;
+      @extend .tabs-active-border;
     }
 
     .tabs-title.is-active a{
-      color: red;
-      box-shadow: 0 -2px 0 0 red inset;
+      color: $pgs-orange;
+      @extend .tabs-active-border;
     }
   }
 }

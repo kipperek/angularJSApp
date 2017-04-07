@@ -30,30 +30,30 @@
     <div><img src="images/loading.gif" alt /></div>
   </div>
 
-  <div class="header">
-    <div class="row columns">
-      <div>
-        <img src="images/logo.png" alt/>
+  <div class="app-container flex-container flex-column">
+    <div class="header flex-no-shrink">
+      <div class="row columns">
+        <div>
+          <img src="images/logo.png" alt/>
+        </div>
+        <ul class="tabs" data-tabs  id="menu-tabs">
+          <li class="tabs-title is-active"><a href="#about" aria-selected="true">{{::'menu.about'|translate}}</a></li>
+          <li class="tabs-title"><a href="#skicams">{{::'menu.cams'|translate}}</a></li>
+          <li class="tabs-title"><a href="#contact">{{::'menu.contact'|translate}}</a></li>
+        </ul>
       </div>
-      <ul class="tabs" data-tabs  id="menu-tabs">
-        <li class="tabs-title is-active"><a href="#about" aria-selected="true">{{::'menu.about'|translate}}</a></li>
-        <li class="tabs-title"><a href="#skicams">{{::'menu.cams'|translate}}</a></li>
-        <li class="tabs-title"><a href="#contact">{{::'menu.contact'|translate}}</a></li>
-      </ul>
     </div>
-  </div>
 
-  <div class="content" class="tabs-content" data-tabs-content="menu-tabs">
-    <div class="tabs-panel is-active" id="about" about></div>
-    <div class="tabs-panel" id="skicams" skicams></div>
-    <div class="tabs-panel" id="contact" contact></div>
+    <div class="content flex-big flex-container" class="tabs-content" data-tabs-content="menu-tabs">
+      <div class="tabs-panel is-active" id="about" about></div>
+      <div class="tabs-panel" id="skicams" skicams></div>
+      <div class="tabs-panel flex-center-self" id="contact" contact></div>
+    </div>
   </div>
 
   <div class="footer">
     <div>{{::'footer.text'|translate}}</div>
   </div>
-
-
 
 
   <script src="dist/vendor.bundle.js"></script>

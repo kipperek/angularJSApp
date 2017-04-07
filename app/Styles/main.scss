@@ -1,3 +1,4 @@
+@import 'vars';
 @import '../../node_modules/material-foundation/scss/material-foundation';
 
 @import 'header';
@@ -8,9 +9,7 @@ html{
   height: 100%;
 }
 body{
-  background: #f8f8f8;
   height: 100%;
-  color: #545454;
 }
 .card{
   color: inherit;
@@ -18,4 +17,59 @@ body{
   &>:last-child{
     margin-bottom: 0;
   }
+}
+
+.image-error{
+  display: block;
+  margin: 0 auto;
+}
+
+.app-container{
+  min-height:100%;
+}
+
+.content .tabs-panel{
+  width:100%;
+}
+
+.button.secondary, .button.secondary:focus, .button.secondary:hover{
+  color: white;
+}
+
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-column {
+  -moz-flex-flow:column;
+  -ms-flex-flow:column;
+  -webkit-flex-flow:column;
+  flex-flow: column;
+}
+
+.flex-no-shrink {
+  -moz-flex-shrink:0;
+  -ms-flex-shrink:0;
+  -webkit-flex-shrink:0;
+  flex-shrink: 0;
+}
+
+.flex-big{
+  -moz-flex:1 1 auto;
+  -ms-flex:1 1 auto;
+  -webkit-flex:1 1 auto;
+  flex: 1 1 auto;
+}
+
+.flex-center-self{
+  align-self: center;
+}
+
+.flex-center {
+  align-items: center
 }

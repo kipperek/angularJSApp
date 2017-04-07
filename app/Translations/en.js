@@ -17,5 +17,11 @@ window.language_en = {
       required: 'Please fill in all required fields',
       email: 'Email is not valid'
     }
+  },
+  skicam:{
+    error: {
+      fetch: 'An error occurred while downloading photos',
+      noimages: 'The given ski kurort is not available'
+    }
   }
 };

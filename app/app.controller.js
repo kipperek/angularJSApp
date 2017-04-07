@@ -1,33 +1,35 @@
 'use strict';
 
 var pgsApp = angular.module('pgsApp');
-pgsApp.controller('appController',['skiService', function(skiService){
+pgsApp.controller('appController',['skiService', '$q', function(skiService, $q){
   var scope = this;
-  scope.camData = {};
+  scope.contact = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
   var generateKeyObject = function(data){
     var ret = {};
     for(var i in data){
       if(!data.hasOwnProperty(i)) continue;
-
       var key = data[i].name;
       ret[key] = data[i];
     }
-
     return ret;
   };
 
   var init = function init(){
-    skiService.getSkiCams().then(function getSkiCamSuccess(ret){
-      angular.extend(scope.camData, generateKeyObject(ret.data));
-      scope.camData.asyncLoaded = true;
-    },function getSkiCamError(){
-      scope.camData.asyncLoaded = true;
-      scope.camData.fetchError = true;
-    });
-    
+    var getSkiCamsPromise = function(resolve, reject){
+      skiService.getSkiCams().then(function getSkiCamSuccess(ret){
+        resolve(generateKeyObject(ret.data));
+      },function getSkiCamError(){
+        reject();
+      });
+    };
+
+    scope.skiCamsPomise = $q(getSkiCamsPromise);
     scope.systemInited = true;
   };
-
-  setTimeout(init);
+  init();
 }]);

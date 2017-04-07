@@ -1,0 +1,33 @@
+input.with-floating-label{
+  margin-top:1rem;
+}
+
+.contact-error-messages{
+  color:red;
+}
+
+[required]+label>span{
+  color:red;
+}
+
+form.ng-submitted.contact-form input.ng-invalid+label{
+  color: red !important;
+}
+
+// Material foundation angular floating label fix
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+  &.with-floating-label.ng-not-empty {
+    & + label.floating-label {
+      color: $primary-color;
+      font-size: rem-calc(12);
+      top: -56px;
+    }
+  }
+  &.with-floating-label.ng-empty:valid:not(:focus) {
+    & + label.floating-label {
+      font-size: rem-calc(16);
+      color: $black-26;
+      top: -35px;
+    }
+  }
+}

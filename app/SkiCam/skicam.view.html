@@ -1,0 +1,8 @@
+<div class="skicam-header">
+  <div class="text-body-1 subheader">{{::skiCamCtrl.today | date : 'dd-MM-yyyy'}}</div>
+  <p class="text-title text-center clearfix">{{::camName}}</p>
+</div>
+<div class="text-center" ng-if="skiCamCtrl.loading === true"><img src="../../images/loading.gif" alt /></div>
+<div ng-if="skiCamCtrl.loading === false">
+  <img ng-repeat="cam in ::skiCamCtrl.camData.cams | limitObject : 2" ng-src="{{::cam.url}}" class="" alt />
+</div>

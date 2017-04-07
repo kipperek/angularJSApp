@@ -7,11 +7,10 @@ require('material-foundation/js/src/ripple.js');
 require('material-foundation/js/src/switches.js');
 
 import css from './Styles/main.scss';
-import css from './Styles/header.scss';
-import css from './Styles/footer.scss';
 
 var pgsApp = angular.module('pgsApp', [
-  'pascalprecht.translate'
+  'pascalprecht.translate',
+  'skiCam'
 ]);
 
 pgsApp.config(['$translateProvider', function($translateProvider) {

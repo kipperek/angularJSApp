@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
+  <title>PGS App</title>
+  <link rel="Shortcut Icon" type="image/x-icon" href="https://www.pgs-soft.com/wp-content/themes/pgstemplate/img/favicon.ico">
   <style>
     .splash-screen{
       position: fixed;
@@ -13,22 +13,21 @@
       height: 100%;
       top:0;
       left:0;
-      background: #EEE;
+      background:white;
       z-index: 1;
     }
     .splash-screen>div {
       position: absolute;
-      width: 100%;
-      top: calc(50% - 0.5em);
-      text-align: center;
-      line-height: 1em;
+      top: calc(50% - 21px);
+      left: calc(50% - 21px);
+      background: white;
     }
   </style>
 </head>
 <body>
   <!-- FOUC Splash -->
   <div class="splash-screen" ng-hide="appCtrl.systemInited">
-    <div>Loading...</div>
+    <div><img src="images/loading.gif" alt /></div>
   </div>
 
   <div class="header">

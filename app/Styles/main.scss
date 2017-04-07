@@ -1,5 +1,9 @@
 @import '../../node_modules/material-foundation/scss/material-foundation';
 
+@import 'header';
+@import 'footer';
+@import 'contact';
+
 html{
   height: 100%;
 }
@@ -11,4 +15,7 @@ body{
 .card{
   color: inherit;
   margin-top: 1rem;
+  &>:last-child{
+    margin-bottom: 0;
+  }
 }

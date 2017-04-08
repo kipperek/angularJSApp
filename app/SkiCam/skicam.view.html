@@ -4,7 +4,7 @@
 </div>
 <div class="text-center" ng-if="skiCamCtrl.loading === true"><img src="../../images/loading.gif" alt /></div>
 <div ng-if="skiCamCtrl.loading === false && skiCamCtrl.camError === undefined">
-  <img outside-img ng-repeat="cam in ::skiCamCtrl.camData.cams | limitObject : 2" ng-src="{{::cam.url}}" class="" alt />
+  <img ng-repeat="cam in ::skiCamCtrl.camData.cams | limitObject : 2" ng-src="{{::cam.url}}" class="" alt />
 </div>
 <div class="text-center" ng-if="skiCamCtrl.loading === false && skiCamCtrl.camError !== undefined">
   {{::'skicam.error.' + skiCamCtrl.camError |translate }}

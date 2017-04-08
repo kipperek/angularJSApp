@@ -9,7 +9,7 @@ pgsApp.controller('appController',['skiService', '$q', function(skiService, $q){
     message: ''
   };
 
-  var generateKeyObject = function(data){
+  var generateKeyObject = function generateKeyObject(data){
     var ret = {};
     for(var i in data){
       if(!data.hasOwnProperty(i)) continue;
@@ -20,7 +20,7 @@ pgsApp.controller('appController',['skiService', '$q', function(skiService, $q){
   };
 
   var init = function init(){
-    var getSkiCamsPromise = function(resolve, reject){
+    var getSkiCamsPromise = function getSkiCamsPromise(resolve, reject){
       skiService.getSkiCams().then(function getSkiCamSuccess(ret){
         resolve(generateKeyObject(ret.data));
       },function getSkiCamError(){

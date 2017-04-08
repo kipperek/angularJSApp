@@ -2,11 +2,7 @@ input.with-floating-label{
   margin-top:1rem;
 }
 
-.contact-error-messages{
-  color:red;
-}
-
-[required]+label>span{
+[required]+label>span, .contact-error-messages{
   color:red;
 }
 

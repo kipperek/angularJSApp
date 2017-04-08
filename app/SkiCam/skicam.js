@@ -21,6 +21,10 @@ skiCam.directive('skiCam', function(){
 
 skiCam.filter('limitObject', function(){
   return function (items, param) {
+    if(typeof param !== 'number'){
+      return items;
+    }
+
     var ret = [], key, keys = Object.keys(items);
     for(var i=0; i<param; i++){
       key = keys[i];

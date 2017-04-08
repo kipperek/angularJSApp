@@ -13,7 +13,7 @@ Used technologies
 - SASS
 - Material Foundation
 
-Site
-----
+Website
+-------
 
 https://kipperek.github.io/angularJSApp/

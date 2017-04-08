@@ -8,9 +8,12 @@ Used technologies
 -----------------
 
 - AngularJS
-  - Angular-Translations
-  - Angular UI Router
-  -
+  - Angular-Translate
 - Webpack
 - SASS
-- 
+- Material Foundation
+
+Site
+----
+
+https://kipperek.github.io/angularJSApp/
